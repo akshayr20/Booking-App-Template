@@ -20,3 +20,15 @@
     transform: skewY(2deg) skewX(5deg) scale(1.1);
   }
 }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.paragraph {
+  font-size: 1.6rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
