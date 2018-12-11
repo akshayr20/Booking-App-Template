@@ -10,7 +10,6 @@
 
   //   ^ starts with * includes $ ends with
   [class^='col-'] {
-    background-color: red;
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
