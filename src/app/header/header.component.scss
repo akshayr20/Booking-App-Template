@@ -1,9 +1,4 @@
-$color-primary: #7ed56f;
-$color-primary-light: #55c57a;
-$color-primary-dark: #28b485;
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import '../../assets/sass/main';
 
 .header {
   height: calc(100vh - 6rem);
@@ -51,59 +46,3 @@ $color-black: #000;
   }
 }
 
-.btn {
-  &:link,
-  &:visited {
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all 0.2s;
-    font-size: 1.2rem;
-  }
-  &--white {
-    background-color: $color-white;
-    color: $color-grey-dark;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
-}
-
-@keyframes moveInLeft {
-  0% {
-    transform: translateX(-10rem);
-    opacity: 0;
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    transform: translateX(10rem);
-    opacity: 0;
-  }
-
-  80% {
-    transform: translateX(-1rem);
-  }
-
-  100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
