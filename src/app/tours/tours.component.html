@@ -22,7 +22,7 @@
               <p class="card__price-only">Only</p>
               <p class="card__price-value">$500</p>
             </div>
-            <a href="#" class="btn btn--white">Book Now</a>
+            <button class="btn btn--white" (click)="showPopup()">Book Now</button>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@
               <p class="card__price-only">Only</p>
               <p class="card__price-value">$500</p>
             </div>
-            <a href="#" class="btn btn--white">Book Now</a>
+            <button class="btn btn--white" (click)="showPopup()">Book Now</button>
           </div>
         </div>
       </div>
@@ -74,11 +74,12 @@
               <p class="card__price-only">Only</p>
               <p class="card__price-value">$500</p>
             </div>
-            <a href="#" class="btn btn--white">Book Now</a>
+            <button class="btn btn--white" (click)="showPopup()">Book Now</button>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="u-center-text u-margin-bottom-top-huge"><a href="#" class="btn btn--green">Discover all tours</a></div>
+  <app-pop-up *ngIf="isPopupVisible" (closePopUp)="closePopup()"></app-pop-up>
 </section>

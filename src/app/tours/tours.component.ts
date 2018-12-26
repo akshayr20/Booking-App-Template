@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tours.component.scss']
 })
 export class ToursComponent implements OnInit {
+  isPopupVisible = false;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  showPopup() {
+    this.isPopupVisible = true;
   }
-
+  closePopup() {
+    this.isPopupVisible = false;
+  }
 }
