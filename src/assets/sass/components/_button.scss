@@ -1,5 +1,6 @@
 @import '../abstracts/variables';
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -9,6 +10,9 @@
     border-radius: 10rem;
     transition: all 0.2s;
     font-size: $default-font-size;
+
+    border: none;
+    cursor: pointer;
   }
   &--white {
     background-color: $color-white;
@@ -45,7 +49,10 @@
     background-color: $color-white;
   }
 
-  &:active {
-    transform: translateY(1px);
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
 }
