@@ -11,6 +11,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { BookingComponent } from './booking/booking.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PopUpComponent } from './pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     StoriesComponent,
     BookingComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
