@@ -35,6 +35,25 @@
     vertical-align: middle;
     padding: 3rem 5rem;
   }
+  &__close {
+    color: $color-grey-dark;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    border: none;
+    display: inline-block;
+    transition: all 0.3s;
+    line-height: 1;
+    background-color: $color-white;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
   &__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
