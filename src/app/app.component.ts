@@ -1,5 +1,4 @@
-import { Component, ViewChild, ComponentFactoryResolver, ViewContainerRef, OnInit } from '@angular/core';
-import { CdkVirtualScrollViewport } from '@angular/cdk/scrolling';
+import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutComponent } from './about/about.component';
@@ -14,10 +13,7 @@ import { FooterComponent } from './footer/footer.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  @ViewChild(CdkVirtualScrollViewport) viewport: CdkVirtualScrollViewport;
-  @ViewChild('viewcontainer', { read: ViewContainerRef }) vc: ViewContainerRef;
-  title = 'booking-app-template';
+export class AppComponent {
   components = [
     NavigationComponent,
     HeaderComponent,
@@ -28,23 +24,4 @@ export class AppComponent implements OnInit {
     BookingComponent,
     FooterComponent
   ];
-  dynamicComponents = [];
-  constructor(private resolver: ComponentFactoryResolver) {}
-
-  ngOnInit() {
-    this.vc.clear();
-    this.components.map(component => {
-      const factory = this.resolver.resolveComponentFactory(component);
-      const dynamicComponent = factory.create(this.vc.parentInjector);
-      this.dynamicComponents.push(dynamicComponent.hostView);
-    });
-  }
-
-  renderComponent(component) {
-    // this.vc.insert(component);
-  }
-
-  nextBatch() {
-    alert('Called');
-  }
 }

@@ -11,8 +11,8 @@
 <app-footer></app-footer>
 <router-outlet></router-outlet> -->
 
-<ng-container *viewcontainer></ng-container>
-
-<cdk-virtual-scroll-viewport [itemSize]="2" (viewChange)="nextBatch($event)">
-  <ng-container *cdkVirtualFor="let component of dynamicComponents; let i = index"> <li class="max-height">component</li> </ng-container>
+<cdk-virtual-scroll-viewport itemSize="1">
+  <ng-container *cdkVirtualFor="let component of components; let i = index">
+    <ng-container *ngComponentOutlet="component"></ng-container>
+  </ng-container>
 </cdk-virtual-scroll-viewport>
