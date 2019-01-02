@@ -45,6 +45,7 @@
     }
   }
   &__nav {
+    display: none;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -98,6 +99,7 @@
   &__checkbox:checked ~ &__nav {
     opacity: 1;
     width: 100%;
+    display: block;
   }
 
   // ICON
