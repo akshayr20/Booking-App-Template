@@ -3,6 +3,9 @@
 .stories {
   padding: 15rem 0;
   position: relative;
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .bg-video {
@@ -17,7 +20,7 @@
   &__content {
     height: 100%;
     width: 100%;
-    // similar as bg-size:cover, works with elments
+    // similar as bg-size:cover, works with elements
     object-fit: cover;
   }
 }
@@ -32,6 +35,14 @@
   padding-left: 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0);
+  }
   &__shape {
     position: relative;
     width: 15rem;
@@ -40,6 +51,9 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
   &__image {
     height: 100%;
@@ -49,6 +63,9 @@
   }
   &__text {
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
   &__caption {
     opacity: 0;
