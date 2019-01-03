@@ -10,7 +10,7 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng lint
-  - ng build --prod --base-href https:///akshayr20.github.com/Booking-App-Template.git
+  - ng build --prod --base-href https://akshayr20.github.io
 deploy:
   provider: pages
   skip_cleanup: true
