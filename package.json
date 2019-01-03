@@ -7,7 +7,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build": "ng build --configuration=production"
+    "build": "ng build --configuration=production --base-href=https://akshayr20.github.io/Booking-App-Template/"
   },
   "private": true,
   "dependencies": {
