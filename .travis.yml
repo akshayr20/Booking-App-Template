@@ -10,12 +10,12 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng lint
-  - npm run test-headless
-  - ng build --prod --base-href https://github.com/akshayr20/Booking-App-Template.git
+  - ng build --prod --base-href https:///akshayr20.github.com/Booking-App-Template.git
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/booking-app-template
+  keep-history: true
   on:
     branch: master
